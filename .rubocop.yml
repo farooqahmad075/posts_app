@@ -1,0 +1,11 @@
+require:
+  - rubocop
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 23
+
+Style/Documentation:
+  Enabled: false
