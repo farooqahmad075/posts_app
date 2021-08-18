@@ -1,6 +1,10 @@
 require:
   - rubocop
 
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+
 Metrics/LineLength:
   Max: 120
 
