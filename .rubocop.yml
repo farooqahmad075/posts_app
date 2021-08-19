@@ -2,14 +2,21 @@ require:
   - rubocop
 
 AllCops:
+  TargetRubyVersion: 2.7
   NewCops: enable
   SuggestExtensions: false
+  Exclude:
+    - 'lib/sequel/plugins/*'
 
 Metrics/LineLength:
   Max: 120
 
 Metrics/MethodLength:
   Max: 23
+
+Metrics/BlockLength:
+  Exclude:
+    - 'db/schema.rb'
 
 Style/Documentation:
   Enabled: false

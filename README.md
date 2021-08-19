@@ -37,7 +37,22 @@ Use following command to do so
 * Set the following ENV Variables in `.env` file
     DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
 
-### 3. Start Application Server
+### 3. Placing the External Plugins
+-----------------------------------
+Placing the following external plugin(s) to your Sequel gemset
+
+* Sequel Polymorphic
+
+        $ cp lib/sequel/plugins/polymorphic.rb .rvm/gems/ruby-2.7.4/gems/sequel-5.47.0/lib/sequel/plugins/polymorphic.rb
+
+### 4. Database Setup
+---------------------
+Setting up the Database
+
+    $ bundle exec sequel -m db/migrations postgres://localhost/posts_app_database
+    $ ruby seeds.rb
+
+### 5. Start Application Server
 -------------------------------
 Start the Application server
 

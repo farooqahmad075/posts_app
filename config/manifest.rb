@@ -2,3 +2,4 @@
 
 require 'initialize'
 require 'database'
+require 'environment'
