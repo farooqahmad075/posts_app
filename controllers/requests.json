@@ -1,0 +1,68 @@
+{
+  "requests": [
+    {
+      "Posts": [
+        {
+          "action": "to create a post",
+          "method": "POST",
+          "endpoint": "api/v1/posts",
+          "body": {
+            "title": "This is Post title",
+            "content": "This is Post Content",
+            "auther": {
+              "username": "John",
+              "ip": "1.1.1.1"
+            }
+          }
+        },
+        {
+          "action": "to get average top rated posts",
+          "method": "GET",
+          "endpoint": "api/v1/posts/average_top_rated/:n"
+        }
+      ],
+      "Ratings":[
+        {
+          "action": "to create a rating",
+          "method": "POST",
+          "endpoint": "api/v1/ratings",
+          "body": {
+            "post_id": 1,
+            "value": 4
+          }
+        }
+      ],
+      "Feedbacks":[
+        {
+          "action": "to create a user feedback",
+          "method": "POST",
+          "endpoint": "api/v1/feedbacks",
+          "body": {
+            "feedbackable_id": 1,
+            "feedbackable_type": "User",
+            "comment": "This is the user feedback comment",
+            "owner_id": 2
+          }
+        },
+        {
+          "action": "to create a post feedback",
+          "method": "POST",
+          "endpoint": "api/v1/feedbacks",
+          "body": {
+            "feedbackable_id": 1,
+            "feedbackable_type": "Post",
+            "comment": "This is the post feedback comment",
+            "owner_id": 2
+          }
+        }
+      ],
+      "IPs":[
+        {
+          "action": "to get the list of users posting from same IP address",
+          "method": "GET",
+          "endpoint": "api/v1/punique_ips"
+        }
+      ]
+    }
+  ]
+}

@@ -17,7 +17,7 @@ A JSON API service developed in Sinatra, Ruby.
 
 Clone the project repo
 
-    $ git clone https://github.com/farooq-dev075/posts_app.git
+    $ git clone https://github.com/farooqahmad075/posts_app.git
 
 Get into the project directory
 
@@ -47,7 +47,7 @@ Placing the following external plugin(s) to your Sequel gemset
 
 ### 4. Database Setup
 ---------------------
-Setting up the Database
+Before setting up the Database(s), please make sure you created database(s) manually from psql console.
 
     $ bundle exec sequel -m db/migrations postgres://localhost/posts_app_database
     $ ruby db/seeds.rb

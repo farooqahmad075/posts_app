@@ -16,6 +16,14 @@ gem 'sinatra-contrib'
 gem 'whenever', require: false
 
 group :development do
-  gem 'pry', '~> 0.13.1'
   gem 'rubocop', '~> 1.19', require: false
+end
+
+group :development, :test do
+  gem 'factory_bot'
+  gem 'pry', '~> 0.13.1'
+end
+
+group :test do
+  gem 'rspec'
 end

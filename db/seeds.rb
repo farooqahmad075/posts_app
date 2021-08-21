@@ -9,7 +9,7 @@ ipv4_addresses_pool = []
 
 # 200k Posts, 2000 authers, each with atleast 100 posts.
 2000.times.each do
-  username = Faker::Internet.username
+  username = Faker::Internet.unique.username(specifier: 3..25)
   100.times.each do
     params = {
       title: Faker::Book.title,
