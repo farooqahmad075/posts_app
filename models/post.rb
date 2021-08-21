@@ -4,6 +4,7 @@ class Post < Sequel::Model
   plugin :validation_helpers
   plugin :association_dependencies
   plugin :polymorphic
+  plugin :nested_attributes
 
   one_to_one :ip_address
   one_to_many :ratings
@@ -12,6 +13,7 @@ class Post < Sequel::Model
   many_to_one :user
 
   add_association_dependencies ip_address: :destroy, ratings: :destroy, feedbacks: :destroy
+  nested_attributes :ip_address
 
   def validate
     super

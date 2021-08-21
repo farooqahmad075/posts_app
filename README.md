@@ -50,9 +50,15 @@ Placing the following external plugin(s) to your Sequel gemset
 Setting up the Database
 
     $ bundle exec sequel -m db/migrations postgres://localhost/posts_app_database
-    $ ruby seeds.rb
+    $ ruby db/seeds.rb
 
-### 5. Start Application Server
+### 5. Cron Jobs
+---------------------
+Setting up the cron jobs
+
+    $ whenever --update-crontab
+
+### 6. Start Application Server
 -------------------------------
 Start the Application server
 

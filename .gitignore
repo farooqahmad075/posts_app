@@ -1,2 +1,4 @@
 # Ignore environment variables file
 .env
+logs/*.log
+xml_reports/*.xml
